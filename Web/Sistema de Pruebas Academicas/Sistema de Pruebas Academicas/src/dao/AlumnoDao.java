@@ -7,24 +7,30 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+import javax.servlet.http.HttpSession;
+
+import org.apache.catalina.Session;
+
 import database.AccesoDB;
 
 public class AlumnoDao implements IAlumnoDao{
 	public void agregaralumno(String nombre,String apellido,String ciclo,
-	String universidad,String fech_nac,int creditos,int año_ingreso){
+	String universidad,String fech_nac,float creditos,int año_ingreso,String usuario){
 		Connection cn=null;
 		try{
 			cn=AccesoDB.getConnection();
-			String sql="{call sp_agregar_alumno(?,?,?,?,?,?,?)}";
+			cn.setAutoCommit(false);
+			String sql="{call sp_agrega_alumno(?,?,?,?,?,?,?)}";
 			CallableStatement cstm = cn.prepareCall(sql);
 			cstm.setString(1, nombre);
 			cstm.setString(2, apellido);
 			cstm.setString(3, ciclo);
 			cstm.setString(4,universidad);
-			cstm.setString(5, universidad);
-			cstm.setString(6, fech_nac);
-			cstm.setInt(7, creditos);
-			cstm.setInt(8, año_ingreso);
+			cstm.setString(5, fech_nac);
+			cstm.setFloat(6, creditos);
+			cstm.setInt(7, año_ingreso);
+			cstm.setString(8, usuario);
 			cstm.executeUpdate();
 			cstm.close();
 		}catch(Exception e){
@@ -64,7 +70,7 @@ public class AlumnoDao implements IAlumnoDao{
 			al.setCiclo(rs.getString(4));
 			al.setUniversidad(rs.getString(5));
 			al.setFech_nac(rs.getString(6));
-			al.setCreditos(rs.getInt(7));
+			al.setCreditos(rs.getFloat(7));
 			al.setAño_ingreso(rs.getInt(8));
 			rs.close();
 			pstm.close();

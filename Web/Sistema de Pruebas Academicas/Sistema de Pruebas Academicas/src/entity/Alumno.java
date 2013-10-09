@@ -7,7 +7,7 @@ public class Alumno {
 	private String ciclo;
 	private String universidad;
 	private String fech_nac;
-	private int creditos;
+	private float creditos;
 	private int año_ingreso;
 	
 	public String getCodalumno() {
@@ -46,10 +46,10 @@ public class Alumno {
 	public void setFech_nac(String fech_nac) {
 		this.fech_nac = fech_nac;
 	}
-	public int getCreditos() {
+	public float getCreditos() {
 		return creditos;
 	}
-	public void setCreditos(int creditos) {
+	public void setCreditos(float creditos) {
 		this.creditos = creditos;
 	}
 	public int getAño_ingreso() {

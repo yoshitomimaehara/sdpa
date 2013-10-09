@@ -12,22 +12,29 @@
 
 </head>
 <body>
-	<form class="formulario_adptado">
-		<label>Nombre</label><input type="text" />
-		<label>Apellidos</label><input type="text"/>
-		<label>Universidad</label><input type="text"/>
+	<form action="AlumnoAgregar" class="formulario_adptado" method="post">
+		<label>Nombre</label><input type="text" name="nombre"/>
+		<label>Apellidos</label><input type="text" name="apellidos"/>
+		<label>Universidad</label><input type="text" name="universidad"/>
 		<label>Ciclo</label>
 		<c:set var="ciclos" value="I,II,III,IV,V,VI,VII,VIII,IX,X,XI"></c:set>
-		<select>
+		<select name="ciclo">
 		<c:forTokens items="${ciclos}" delims="," var="ciclo">
 		<option><c:out value="${ciclo}"></c:out></option>
 		</c:forTokens>
 		</select>
-		<label>Fecha de Nacimiento</label><input type="date"/>
-		<label>Creditos</label><input type="number" min="1" max="220" step="0.5"/>
-		<label>Año de Ingreso</label><input type="number" min="2000" max="2013" value="2013"/>
+		<label>Fecha de Nacimiento</label><input type="date" name="fech_nac"/>
+		<label>Creditos</label><input type="number" min="1" max="220" step="0.5" name="creditos"/>
+		<label>Año de Ingreso</label><input type="number" min="2000" max="2013" value="2013" name="año_ingreso"/>
 		<br/>
-		<input type="button" value="Insertar" class="btn"/>
+		<input type="submit" value="Insertar"/>
 	</form>
+	<c:if test="${requestScope.error != null}">
+		<div class="alert alert-error">
+				<a class="close" data-dismiss="alert">&times;</a>	
+				${requestScope.error}	
+				
+		</div>
+	</c:if>
 </body>
 </html>

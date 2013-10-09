@@ -66,6 +66,11 @@ insert into mensaje(codmensaje,mensaje)
 values('000005','El Curso ya Existe');
 insert into mensaje(codmensaje,mensaje)
 values('000006','El Alumno ya Existe');
+insert into mensaje(codmensaje,mensaje)
+values('000007','El Alumno se Agrego con Exito');
+insert into mensaje(codmensaje,mensaje)
+values('000008','El Curso se Agrego con Exito');
+
 
 -- ========================================
 -- -------TABLA: Alumno--------------------
@@ -150,8 +155,6 @@ constraint pk_usuario
 primary key(usuario)
 );
 
-/*insert into usuario(usuario,contrasenia,tipo)
-values('PRO001','jaureguialan','P');*/
 insert into usuario(usuario,contrasenia,tipo)
 values('admin','superusuario','S');
 
@@ -169,6 +172,7 @@ insert into control values
 ('auditoria','1');
 insert into control values
 ('profesor','PRO001');
+
 -- ========================================
 -- -------TABLA: Auditoria-----------------
 -- ========================================

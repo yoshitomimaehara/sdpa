@@ -6,12 +6,13 @@
 <fullyQualifiedTypeName name="dao.LoginDao"/>
 <fullyQualifiedTypeName name="model.LoginModel"/>
 <fullyQualifiedTypeName name="entity.Usuario"/>
-<fullyQualifiedTypeName name="dao.MensajeDao"/>
 <fullyQualifiedTypeName name="javax.servlet.jsp.tagext.TryCatchFinally"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="interfaces.IAlumnoDao"/>
 <fullyQualifiedTypeName name="dao.AlumnoDao"/>
 <fullyQualifiedTypeName name="entity.Alumno"/>
+<fullyQualifiedTypeName name="dao.MensajeDao"/>
 <fullyQualifiedTypeName name="model.AlumnoModel"/>
+<fullyQualifiedTypeName name="database.AccesoDB"/>
 </qualifiedTypeNameHistroy>

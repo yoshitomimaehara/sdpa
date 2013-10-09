@@ -1,0 +1,63 @@
+package entity;
+
+public class Alumno {
+	private String codalumno;
+	private String nombre;
+	private String apellido;
+	private String ciclo;
+	private String universidad;
+	private String fech_nac;
+	private float creditos;
+	private int año_ingreso;
+	
+	public String getCodalumno() {
+		return codalumno;
+	}
+	public void setCodalumno(String codalumno) {
+		this.codalumno = codalumno;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getApellido() {
+		return apellido;
+	}
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+	public String getCiclo() {
+		return ciclo;
+	}
+	public void setCiclo(String ciclo) {
+		this.ciclo = ciclo;
+	}
+	public String getUniversidad() {
+		return universidad;
+	}
+	public void setUniversidad(String universidad) {
+		this.universidad = universidad;
+	}
+	public String getFech_nac() {
+		return fech_nac;
+	}
+	public void setFech_nac(String fech_nac) {
+		this.fech_nac = fech_nac;
+	}
+	public float getCreditos() {
+		return creditos;
+	}
+	public void setCreditos(int creditos) {
+		this.creditos = creditos;
+	}
+	public int getAño_ingreso() {
+		return año_ingreso;
+	}
+	public void setAño_ingreso(int año_ingreso) {
+		this.año_ingreso = año_ingreso;
+	} 
+	
+	
+}

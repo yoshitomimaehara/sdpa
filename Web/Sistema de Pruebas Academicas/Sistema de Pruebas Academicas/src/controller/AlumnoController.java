@@ -8,10 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.MensajeDao;
 import model.AlumnoModel;
 import entity.Alumno;
+import entity.Usuario;
 
 /**
  * Servlet implementation class AlumnoController
@@ -33,9 +35,22 @@ public class AlumnoController extends HttpServlet {
 	
 	
 	private void agregarAlumno(HttpServletRequest request,
-			HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		
+			HttpServletResponse response) throws ServletException, IOException {
+		String nombre=request.getParameter("nombre");
+		String apellido=request.getParameter("apellido");
+		String ciclo=request.getParameter("ciclo");
+		String universidad=request.getParameter("universidad");
+		String fech_nac=request.getParameter("fech_nac");
+		float creditos=Float.parseFloat(request.getParameter("creditos"));
+		int año_ingreso=Integer.parseInt(request.getParameter("año_ingreso"));
+		try {
+			AlumnoModel model = new AlumnoModel();
+			model.agregarAlumno(nombre, apellido, ciclo, universidad, fech_nac, creditos, año_ingreso,"admin");
+		} catch (Exception e) {
+			request.setAttribute("error", e.getMessage());
+		}
+		RequestDispatcher rd = request.getRequestDispatcher("alumno_insertar.jsp");
+		rd.forward(request, response);
 	}
 
 

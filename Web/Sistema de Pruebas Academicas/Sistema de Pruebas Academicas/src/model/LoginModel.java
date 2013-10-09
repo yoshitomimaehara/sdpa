@@ -15,7 +15,7 @@ public class LoginModel {
 		if(usu == null){
 			throw new RuntimeException(men.getMensaje("000001"));
 		}
-		if(usu.getContrasenia()!=pass){
+		if(!usu.getContrasenia().equals(pass)){
 			throw new RuntimeException(men.getMensaje("000002"));
 		}
 		return usu;

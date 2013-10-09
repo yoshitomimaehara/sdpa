@@ -20,6 +20,8 @@
 	<input type="submit" value="Consultar"/>
 	<br/>
 	<c:if test="${requestScope.al != null}">	
+		<br/>
+		<br/>
 		<table border=1>
 		<tr><th>CodAlumno</th><th>Nombre</th><th>Apellidos</th><th>Ciclo</th><th>Universidad</th><th>Fecha Nacimiento</th><th>Creditos</th><th>Año Ingreso</th></tr>
 		<tr>

@@ -5,4 +5,5 @@ ENABLED_DECORATORS=org.eclipse.jst.ws.jaxws.dom.integration.navigator.WebService
 PLUGINS_NOT_ACTIVATED_ON_STARTUP=org.eclipse.m2e.discovery;
 eclipse.preferences.version=1
 org.eclipse.jface.textfont=1|Consolas|14.25|0|WINDOWS|1|-19|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+overridepresentation=true
 terminal.views.view.font.definition=1|Consolas|14.25|0|WINDOWS|1|-19|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;

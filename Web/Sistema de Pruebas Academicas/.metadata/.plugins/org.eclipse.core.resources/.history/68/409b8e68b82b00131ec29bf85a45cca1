@@ -1,0 +1,15 @@
+package dao;
+
+import java.sql.Connection;
+
+public class AlumnoDao {
+	public void agregaralumno(){
+		Connection cn=null;
+		Alumno alu=null;
+		try{
+			
+		}catch{
+			
+		}
+	}
+}

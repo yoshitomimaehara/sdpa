@@ -1,0 +1,37 @@
+<%@page import="model.AlumnoModel"%>
+<%@page import="entity.Alumno"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ <%
+ Alumno al=new Alumno();
+ String idProducto="",error="";
+ if(request.getParameter("BtnConsultar")!=null){
+	 	idAlumno=request.getParameter("id");
+		try{
+			AlumnoModel model = new AlumnoModel();
+			al=model.getAlumnoxid(idAlumno)
+		}catch(Exception e){
+			error=e.getMessage();
+		}
+ }
+ %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title></title>
+</head>
+<body>
+	<form action="consultaalumno" method="post">
+	<label>Ingrese el Codigo</label><input type="text" name="idAlumno"/><input type="button" value="Consultar"/>
+	</form>
+	<%
+	if(request.getParameter("BtnConsultar")!=null && error==""){	
+		out.print("<table border=1>");
+		out.print("<tr><th>Idproducto</th><th>Nombre</th><th>Precio</th><th>Stock</th></tr>");
+		out.print("<tr><td>"+pro.getIdproducto()+"</td><td>"+pro.getNombre()+"</td><td>"+pro.getPrecio()+"</td><td>"+pro.getStock()+"</td></tr>");
+		out.print("</table>");
+	}
+	%>
+</body>
+</html>

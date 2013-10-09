@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css\styles.css"/>
+<link rel="stylesheet" href="css\bootstrap.min.css">
+<script src="js\jquery.js"></script>
+<script src="js\scripts.js"></script>
+
+</head>
+<body>
+	<form>
+		<label>Nombre</label><input type="text" />
+		<label>Apellidos</label><input type="text"/>
+		<label>Universidad</label><input type="text"/>
+		<label>Fecha de Nacimiento</label><input type="date"/>
+	</form>
+</body>
+</html>

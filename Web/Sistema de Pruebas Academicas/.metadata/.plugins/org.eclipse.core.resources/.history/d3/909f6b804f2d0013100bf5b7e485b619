@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title></title>
+</head>
+<body>
+	<form action="consultaalumno" method="post">
+	<label>Ingrese el Codigo</label><input type="text"/><input type="button" value="Consultar"/>
+	<c:out value="${<table border=1>}" />
+	<c:out value="${<tr><th>Idproducto</th><th>Nombre</th><th>Precio</th><th>Stock</th></tr>}" />
+	<c:out value="${<table border=1>}" />
+	<c:out value="${<table border=1>}" />
+	</form>
+</body>
+</html>

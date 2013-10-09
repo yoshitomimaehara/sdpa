@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="interfaces.ILoginDao"/>
+<fullyQualifiedTypeName name="dao.LoginDao"/>
+<fullyQualifiedTypeName name="model.LoginModel"/>
+<fullyQualifiedTypeName name="entity.Usuario"/>
+<fullyQualifiedTypeName name="dao.MensajeDao"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="entity.Alumno"/>
+<fullyQualifiedTypeName name="database.AccesoDB"/>
+<fullyQualifiedTypeName name="java.sql.CallableStatement"/>
+<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="interfaces.IAlumnoDao"/>
+</qualifiedTypeNameHistroy>

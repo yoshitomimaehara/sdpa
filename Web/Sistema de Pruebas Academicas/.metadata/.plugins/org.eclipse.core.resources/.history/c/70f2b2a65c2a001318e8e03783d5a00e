@@ -1,0 +1,11 @@
+/**
+ * Nombre:script.js
+ * Descripcion: Funciones JavaScript/JQuery
+ * Autores:Yoshitomi Maehara/Liliana Gonzales
+ * Email:
+ */
+
+var press=false;
+$(document).ready(function(){
+	$().alert().in().fade();
+});

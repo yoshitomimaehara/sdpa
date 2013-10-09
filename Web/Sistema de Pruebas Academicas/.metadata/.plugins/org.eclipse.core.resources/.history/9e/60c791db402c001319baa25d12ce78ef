@@ -1,0 +1,10 @@
+/**
+ * Nombre:script.js
+ * Descripcion: Funciones JavaScript/JQuery
+ * Autores:Yoshitomi Maehara/Liliana Gonzales
+ * Email:
+ */
+
+$(document).ready(function(){
+	$().alert();
+});

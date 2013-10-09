@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css\styles.css"/>
+<link rel="stylesheet" href="css\bootstrap.min.css">
+<script src="js\jquery.js"></script>
+<script src="js\scripts.js"></script>
+
+</head>
+<body>
+	<form>
+		<label>Nombre</label><input type="text" />
+		<label>Apellidos</label><input type="text"/>
+		<label>Universidad</label><input type="text"/>
+		<label>Ciclo</label>
+		<c:set var="ciclos" value="I,II,III,IV,V,VI,VII,VIII,IX,X,XI"></c:set>
+		<c:forEach items="${ciclos}" delims="," var="ciclo_letra">
+		<ul>
+		<li><c:out value="${ciclo_letra}"></c:out></li>
+		</ul>
+		</c:forEach>
+		<label>Fecha de Nacimiento</label><input type="date"/>
+		<label>Año de Ingreso</label><input type="number" min="2000" max="2013" value="2013">
+	</form>
+</body>
+</html>

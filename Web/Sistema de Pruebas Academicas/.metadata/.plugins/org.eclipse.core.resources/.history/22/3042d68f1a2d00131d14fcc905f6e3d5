@@ -1,0 +1,42 @@
+package dao;
+
+import interfaces.IAlumnoDao;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import database.AccesoDB;
+
+public class AlumnoDao implements IAlumnoDao{
+	public void agregaralumno(String nombre,String apellido,String ciclo,
+	String universidad,String fech_nac,int creditos,int año_ingreso){
+		Connection cn=null;
+		try{
+			cn=AccesoDB.getConnection();
+			String sql="{call sp_agregar_alumno(?,?,?,?,?,?,?)}";
+			CallableStatement cstm = cn.prepareCall(sql);
+			cstm.setString(1, nombre);
+			cstm.setString(2, apellido);
+			cstm.setString(3, ciclo);
+			cstm.setString(4,universidad);
+			cstm.setString(5, universidad);
+			cstm.setString(6, fech_nac);
+			cstm.setInt(7, creditos);
+			cstm.setInt(8, año_ingreso);
+			cstm.executeUpdate();
+			cstm.close();
+		}catch(Exception e){
+			throw new RuntimeException(e.getMessage());
+		}finally{
+			try {
+				cn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+}

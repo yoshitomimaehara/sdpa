@@ -1,0 +1,88 @@
+/*
+Nombre:styles.css
+Descripcion:Hoja de Estilos
+Autores:Yoshitomi Maehara/Liliana Gonzales
+Email:
+*/
+/* universal */
+*{
+}
+
+/*etiquetas*/
+label{
+	color:white;
+}
+
+/* identificadores */
+#ingresar{
+	background-color: #5162F6;
+	color:white;
+}
+
+#ingresar:hover{
+	background-color: white;
+	color:black;
+	
+}
+
+
+#link_contrasenia{
+	color:white;
+	text-decoration:none;
+}
+
+#link_contrasenia:hover{
+	color:yellow;
+	text-decoration:none;
+}
+
+#academico{
+	padding:10px;
+	clear: none;
+}
+
+#academico:hover{
+	display:block;
+	padding:10px;
+}
+
+/* clases */
+.cabecera_index{
+  background-color:#5162F6;
+  padding:0.5em;
+  text-align:center;
+  color:white;
+}
+
+.login_index{
+   background-color:#5162F6;
+   padding:3em;
+   width:3em;
+}
+
+.alerta{
+
+}
+
+.pie_index{
+	background-color:#5162F6;
+	height:3em;
+	padding:0.5em;
+	color:white;
+}
+
+.menu_panel{
+	background-color:#5162F6;
+}
+.menu_lista{
+	list-style-type:none;
+}
+
+.menu_lista li{
+	display:inline-block;
+	padding:10px;
+}
+
+.imagen{
+	padding:2em;
+}

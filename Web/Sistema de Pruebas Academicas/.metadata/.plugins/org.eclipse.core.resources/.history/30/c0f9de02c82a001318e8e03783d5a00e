@@ -1,0 +1,47 @@
+<!--
+Nombre:panel.jsp
+Descripcion:Pagina Principal
+Autores:Yoshitomi Maehara/Liliana Gonzales
+Email:
+-->
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css\styles.css"/>
+<link rel="stylesheet" href="css\bootstrap.min.css">
+<script src="js\jquery.js"></script>
+<script src="js\scripts.js"></script>
+<script src="js\bootstrap.js"></script>
+<title>.::::Sistema de Evaluaciones Academicas::::. - Principal</title>
+</head>
+<body>
+	<header class="cabecera_panel">
+
+	</header>
+	<nav class="menu_panel navbar">
+	<div class="navbar-inner">
+	<a class="brand" href="#"> Principal </a>
+    	<div class="container">
+			<ul class="nav">
+			 	<li class="dropdown">
+    			<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Academico <b class="caret"></b></a>
+    			<ul class="dropdown-menu">
+				<li></li>
+    			</ul>
+    			</li>
+				<li><a href="#">Perfil</a></li>
+  				<li><a href="#">Link</a></li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+	<section class="contenido_panel">
+		<article>
+			
+		</article>
+	</section>
+</body>
+</html>

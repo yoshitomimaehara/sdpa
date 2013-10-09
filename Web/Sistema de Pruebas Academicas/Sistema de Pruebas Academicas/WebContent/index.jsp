@@ -12,6 +12,7 @@ Email:
 <head>
 <link rel="stylesheet" type="text/css" href="css\styles.css"/>
 <link rel="stylesheet" href="css\bootstrap.min.css">
+<script src="js\bootstrap.js"></script>
 <script src="js\jquery.js"></script>
 <script src="js\scripts.js"></script>
 <title>.::::Sistema de Evaluaciones Academicas::::.</title>
@@ -39,7 +40,8 @@ Email:
 			</form>
 		<c:if test="${requestScope.error != null}">
 			<div class="alert alert-error">
-				${requestScope.error}		
+				<a class="close" data-dismiss="alert">&times;</a>
+				${requestScope.error}	
 			</div>
 		</c:if>
 	</aside>

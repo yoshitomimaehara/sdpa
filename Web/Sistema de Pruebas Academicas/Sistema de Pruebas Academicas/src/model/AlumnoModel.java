@@ -1,6 +1,7 @@
 package model;
 
 import dao.AlumnoDao;
+import dao.MensajeDao;
 import entity.Alumno;
 import interfaces.IAlumnoDao;
 
@@ -14,7 +15,7 @@ public class AlumnoModel {
 	}
 	
 	public Alumno getAlumnoxid(String id){
-		IAlumnoDao dao =new AlumnoDao();
+		IAlumnoDao dao = new AlumnoDao();
 		Alumno al = dao.getAlumnoxuser(id);
 		return al;
 	}

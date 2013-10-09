@@ -6,11 +6,6 @@
  */
 
 
-
-$(document).ready(function(){
-	$().alert();
-});
-
 $(function(){
 	$('.accesos').click(function(e){
 		e.preventDefault();

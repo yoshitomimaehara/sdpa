@@ -7,8 +7,6 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-
 import database.AccesoDB;
 
 public class AlumnoDao implements IAlumnoDao{
@@ -34,9 +32,8 @@ public class AlumnoDao implements IAlumnoDao{
 		}finally{
 			try {
 				cn.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			} catch (Exception e) {
+
 			}
 		}
 	}
@@ -44,14 +41,22 @@ public class AlumnoDao implements IAlumnoDao{
 	@Override
 	public Alumno getAlumnoxuser(String user) {
 		Connection cn=null;
-		Alumno al=null;
+		Alumno al=new Alumno();
 		try {
-			String sql="select *"
-					+ "from alumno"
-					+ "where codalumno=?";
+			cn=AccesoDB.getConnection();
+			String sql="select count(*) from alumno where codalumno=?";
 			PreparedStatement pstm = cn.prepareStatement(sql);
 			pstm.setString(1, user);
 			ResultSet rs = pstm.executeQuery();
+			rs.next();
+			int cont=rs.getInt(1);
+			if(cont!=1){
+				throw new Exception("El Alumno no Existe");
+			}
+			sql="select * from alumno where codalumno=?";
+			pstm = cn.prepareStatement(sql);
+			pstm.setString(1, user);
+			rs = pstm.executeQuery();
 			rs.next();
 			al.setCodalumno(rs.getString(1));
 			al.setNombre(rs.getString(2));
@@ -61,14 +66,14 @@ public class AlumnoDao implements IAlumnoDao{
 			al.setFech_nac(rs.getString(6));
 			al.setCreditos(rs.getInt(7));
 			al.setAño_ingreso(rs.getInt(8));
+			rs.close();
 			pstm.close();
 		} catch (Exception e) {
 			throw new RuntimeException(e.getMessage());
 		}finally{
 			try {
 				cn.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
+			} catch (Exception e) {
 			}
 		}
 		return al;

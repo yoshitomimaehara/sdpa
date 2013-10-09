@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="C:\Users\YOSHITOMI\Dropbox\Sistema De Pruebas Académicas\Web\Sistema de Pruebas Academicas\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\YOSHITOMI\Dropbox\Sistema De Pruebas Académicas\Web\Sistema de Pruebas Academicas\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Sistema de Pruebas Academicas" path="/Sistema_de_Pruebas_Academicas" reloadable="true" source="org.eclipse.jst.jee.server:Sistema de Pruebas Academicas"/></Host>
+      <Context docBase="C:\Users\YOSHITOMI\Documents\GitHub\sdpa\Web\Sistema de Pruebas Academicas\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\YOSHITOMI\Documents\GitHub\sdpa\Web\Sistema de Pruebas Academicas\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Sistema de Pruebas Academicas" path="/Sistema_de_Pruebas_Academicas" reloadable="true" source="org.eclipse.jst.jee.server:Sistema de Pruebas Academicas"/></Host>
     </Engine>
   </Service>
 </Server>

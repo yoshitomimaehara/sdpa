@@ -8,6 +8,7 @@ PROCEDURE SP_AGREGAR_CURSO
 )
 AS
 v_msg varchar2(500);
+v_msg_error varchar2(500);
 v_codcurso varchar2(6);
 v_inicio varchar2(5);
 val number;
@@ -41,7 +42,8 @@ BEGIN
    commit;
 EXCEPTION
   WHEN OTHERS THEN
-  DBMS_OUTPUT.PUT_LINE('error!!!!!');
+  v_msg_error:=SQLERRM;
+  raise_application_error(-20001,v_msg_error);
   rollback;
 END;
 /

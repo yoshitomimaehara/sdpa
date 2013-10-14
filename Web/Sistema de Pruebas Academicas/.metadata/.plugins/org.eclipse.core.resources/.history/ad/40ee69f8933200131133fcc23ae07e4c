@@ -1,0 +1,5 @@
+package interfaces;
+
+public class IProfesor {
+	public void crearProfesor(String Nombre,String Apellido);
+}

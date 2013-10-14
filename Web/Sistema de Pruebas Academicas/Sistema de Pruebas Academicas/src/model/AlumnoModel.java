@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Date;
+
 import dao.AlumnoDao;
 import dao.MensajeDao;
 import entity.Alumno;
@@ -21,8 +23,8 @@ public class AlumnoModel {
 	}
 	
 	public void agregarAlumno(String nombre,String apellido,String ciclo,
-			String universidad,String fech_nac,float creditos,int año_ingreso,String usuario){
+			String universidad,Date fech_nac,float creditos,int anio_ingreso,String usuario){
 		IAlumnoDao dao=new AlumnoDao();
-		dao.agregaralumno(nombre, apellido, ciclo, universidad, fech_nac, creditos, año_ingreso,usuario);	
+		dao.agregaralumno(nombre, apellido, ciclo, universidad, fech_nac, creditos, anio_ingreso,usuario);	
 	}
 }

@@ -7,6 +7,7 @@ PROCEDURE SP_AGREGA_PROFESOR
 AS
 v_contraseña varchar2(500);
 v_msg varchar2(500);
+v_msg_error varchar2(500);
 v_codprofesor varchar2(6);
 v_temporal varchar2(6);
 v_inicio varchar2(3);
@@ -52,5 +53,7 @@ BEGIN
 EXCEPTION
   WHEN OTHERS THEN
   rollback;
+  v_msg_error:=SQLERRM;
+  raise_application_error(-20001,v_msg_error);
 END;
 /

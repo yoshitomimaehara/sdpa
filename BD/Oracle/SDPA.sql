@@ -79,11 +79,11 @@ create table alumno(
 	codalumno char(6) not null,
 	nombre varchar2(20) not null,
   apellido varchar2(20) not null,
-  ciclo char(2) not null,
+  ciclo varchar2(20) not null,
   universidad varchar(50) not null,
   fech_nac date not null,
-	creditos integer not null,
-  año_ingreso integer not null,
+	creditos float not null,
+  anio_ingreso integer not null,
   constraint pk_alumno 
 		primary key(codalumno)
   );
@@ -99,7 +99,7 @@ values('000002','Alex','falcon','V','universidad de piura',to_date('1990/06/11',
 -- ========================================
 create table profesor(
   codprofesor char(6) not null,
-  nombre varchar2(20) not nrull,
+  nombre varchar2(20) not null,
   apellido varchar2(20) not null,
   constraint pk_profesor
   primary key(codprofesor)
@@ -112,7 +112,7 @@ create table curso(
   codcurso char(6) not null,
   nombre varchar2(20) not null,
   ciclo varchar2(20) not null,
-  creditos integer not null,
+  creditos float not null,
   constraint pk_curso
   primary key(codcurso)
 );
@@ -228,9 +228,6 @@ create table evaluacion_respuestas(
  codalumno char(6) not null,
  nropregunta integer not null,
  alternativa char(2) not null,
- constraint fk_evaluacion
- foreign key(codevaluacion)
- references evaluacion_preguntas,
  constraint fk_alumno
  foreign key(codalumno)
  references alumno

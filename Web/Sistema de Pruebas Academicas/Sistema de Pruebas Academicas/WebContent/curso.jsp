@@ -23,7 +23,7 @@ Email:
 		<ul class="nav nav-list">
 			<li class="nav-header">Curso</li>
 			<li><a href="#">Consultar</a></li>
-			<li><a href="#">Insertar</a></li>
+			<li><a href="curso_insertar.jsp">Insertar</a></li>
 			<li><a href="#">Modificar</a></li>
 			<li><a href="#">Eliminar</a></li>
 		</ul>

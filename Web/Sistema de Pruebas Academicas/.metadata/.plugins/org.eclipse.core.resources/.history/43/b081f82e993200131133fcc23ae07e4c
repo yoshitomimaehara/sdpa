@@ -1,0 +1,13 @@
+package dao;
+
+import interfaces.ICurso;
+
+public class CursoDao implements ICurso {
+
+	@Override
+	public void agregarCurso(String nombre, String ciclo, float creditos) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

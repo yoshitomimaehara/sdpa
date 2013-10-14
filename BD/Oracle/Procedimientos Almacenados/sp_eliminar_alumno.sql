@@ -14,7 +14,7 @@ begin
    raise_application_error(-20001,'no existe el alumno');
  end if;
  delete from alumno where codalumno=p_codalumno;
- v_msg:='se eliminno al alumno '||p_codalumno;
+ v_msg:='se elimino al alumno '||p_codalumno;
  select to_number(valor,99) into val from control
    where parametro='auditoria';
    insert into auditoria(CODSEGUIMIENTO,CAMBIO,VALOR_INICIO,VALOR_MODIF,USUARIO)
@@ -23,7 +23,16 @@ begin
    update control
    set valor=val
    where parametro='auditoria';
-   
+ delete from usuario where usuario=p_codalumno;
+ v_msg:='se elimino al usuario '||p_codalumno;
+ select to_number(valor,99) into val from control
+   where parametro='auditoria';
+   insert into auditoria(CODSEGUIMIENTO,CAMBIO,VALOR_INICIO,VALOR_MODIF,USUARIO)
+   values(val,v_msg,0,0,p_usuario);
+   val:=val+1;
+   update control
+   set valor=val
+   where parametro='auditoria';
 commit;
 exception 
 when others then

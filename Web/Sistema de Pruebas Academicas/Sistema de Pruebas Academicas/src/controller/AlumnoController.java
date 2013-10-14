@@ -1,6 +1,9 @@
 package controller;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +15,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.MensajeDao;
 import model.AlumnoModel;
+import model.MensajeModel;
 import entity.Alumno;
 import entity.Usuario;
 
@@ -29,39 +33,51 @@ public class AlumnoController extends HttpServlet {
 		if(alias.equals("/AlumnoConsultar")){
 			consultarAlumno(request,response);
 		}else if(alias.equals("/AlumnoAgregar")){
-			agregarAlumno(request,response);
+			try {
+				agregarAlumno(request,response);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				request.setAttribute("error", e.getMessage());
+				RequestDispatcher rd = request.getRequestDispatcher("alumno_insertar.jsp");
+				rd.forward(request, response);
+			}
 		}
 	}
 	
 	
-	private void agregarAlumno(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	private void agregarAlumno(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException, ParseException {
+		SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
 		String nombre=request.getParameter("nombre");
 		String apellido=request.getParameter("apellido");
 		String ciclo=request.getParameter("ciclo");
 		String universidad=request.getParameter("universidad");
-		String fech_nac=request.getParameter("fech_nac");
+		Date fech_nac=formato.parse(request.getParameter("fech_nac").toString());
 		float creditos=Float.parseFloat(request.getParameter("creditos"));
-		int año_ingreso=Integer.parseInt(request.getParameter("año_ingreso"));
+		int anio_ingreso=Integer.parseInt(request.getParameter("anio_ingreso"));
 		try {
+			HttpSession session = request.getSession();
+			Usuario usu = (Usuario) session.getAttribute("usuario");
 			AlumnoModel model = new AlumnoModel();
-			model.agregarAlumno(nombre, apellido, ciclo, universidad, fech_nac, creditos, año_ingreso,"admin");
+			model.agregarAlumno(nombre, apellido, ciclo, universidad, fech_nac, creditos, anio_ingreso,usu.getUsuario());
 		} catch (Exception e) {
 			request.setAttribute("error", e.getMessage());
 		}
+		request.setAttribute("confirmacion", "El Alumno se Agrego con Exito");
 		RequestDispatcher rd = request.getRequestDispatcher("alumno_insertar.jsp");
 		rd.forward(request, response);
 	}
-
-
+	
+	
 	private void consultarAlumno(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Alumno al=new Alumno();
+		 Alumno al=new Alumno();
 		 String idAlumno=request.getParameter("idAlumno");
 				try{
 					AlumnoModel model = new AlumnoModel();
 					al=model.getAlumnoxid(idAlumno);
 					request.setAttribute("confirmacion", "Alumno fue creado!!!");
 					request.setAttribute("al",al);
+					HttpSession session=request.getSession();
+					session.getAttribute("usuario");
 					MensajeDao men = new MensajeDao();
 				}catch(Exception e){
 					request.setAttribute("error", e.getMessage());

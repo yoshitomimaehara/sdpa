@@ -1,14 +1,16 @@
 package entity;
 
+import java.util.Date;
+
 public class Alumno {
 	private String codalumno;
 	private String nombre;
 	private String apellido;
 	private String ciclo;
 	private String universidad;
-	private String fech_nac;
+	private Date fech_nac;
 	private float creditos;
-	private int año_ingreso;
+	private int anio_ingreso;
 	
 	public String getCodalumno() {
 		return codalumno;
@@ -40,10 +42,10 @@ public class Alumno {
 	public void setUniversidad(String universidad) {
 		this.universidad = universidad;
 	}
-	public String getFech_nac() {
+	public Date getFech_nac() {
 		return fech_nac;
 	}
-	public void setFech_nac(String fech_nac) {
+	public void setFech_nac(Date fech_nac) {
 		this.fech_nac = fech_nac;
 	}
 	public float getCreditos() {
@@ -52,11 +54,11 @@ public class Alumno {
 	public void setCreditos(float creditos) {
 		this.creditos = creditos;
 	}
-	public int getAño_ingreso() {
-		return año_ingreso;
+	public int getAnio_ingreso() {
+		return anio_ingreso;
 	}
-	public void setAño_ingreso(int año_ingreso) {
-		this.año_ingreso = año_ingreso;
+	public void setAnio_ingreso(int anio_ingreso) {
+		this.anio_ingreso = anio_ingreso;
 	} 
 	
 	

@@ -8,6 +8,7 @@ create or replace PROCEDURE SP_AGREGA_NOTAS(
   p_usuario varchar2
 ) 
 AS
+v_msg_error varchar(500);
 v_msg varchar(500);
 val number;
 BEGIN
@@ -27,5 +28,7 @@ BEGIN
 EXCEPTION
   WHEN OTHERS THEN
   rollback;
+  v_msg_error:=SQLERRM;
+  raise_application_error(-20001,v_msg_error);
 END;
 /

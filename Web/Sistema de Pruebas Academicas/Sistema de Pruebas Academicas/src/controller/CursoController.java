@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import model.CursoModel;
 import model.MensajeModel;
+import entity.Curso;
 import entity.Usuario;
 
 /**
@@ -26,7 +27,6 @@ public class CursoController extends HttpServlet {
      */
     public CursoController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -36,9 +36,43 @@ public class CursoController extends HttpServlet {
 		String alias = request.getServletPath();
 		if(alias.equals("/CursoAgregar")){
 			cursoAgregar(request,response);
+		}else if(alias.equals("/CursoEliminar")){
+			cursoEliminar(request,response);
+		}else if(alias.equals("/CursoConsultar")){
+			CursoConsultar(request,response);
 		}
 	}
 	
+	private void CursoConsultar(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		String codcurso=request.getParameter("codcurso");
+		try {
+			CursoModel model = new CursoModel();
+			Curso cur=model.consultarxcod(codcurso);
+			request.setAttribute("cur", cur);
+		} catch (Exception e) {
+			request.setAttribute("error", e.getMessage());
+		}
+		RequestDispatcher rd = request.getRequestDispatcher("curso_consultar.jsp");
+		rd.forward(request, response);
+	}
+
+	private void cursoEliminar(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		String codcurso=request.getParameter("codcurso");
+		try {
+			HttpSession session = request.getSession();
+			Usuario usu = (Usuario) session.getAttribute("usuario");
+			String usuario=usu.getUsuario();
+			CursoModel model = new CursoModel();
+			model.eliminarCurso(codcurso, usuario);
+		} catch (Exception e) {
+			request.setAttribute("error", e.getMessage());
+		}
+		RequestDispatcher rd = request.getRequestDispatcher("curso_eliminar.jsp");
+		rd.forward(request, response);
+	}
+
 	private void cursoAgregar(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
 		String nombre=request.getParameter("nombre");
 		String ciclo=request.getParameter("ciclo");
@@ -52,7 +86,7 @@ public class CursoController extends HttpServlet {
 			CursoModel model = new CursoModel();
 			model.agregarCurso(nombre, ciclo, creditos,usuario);
 			
-			request.setAttribute("confirmacion", MensajeModel.getMensaje("000006"));
+			//request.setAttribute("confirmacion", MensajeModel.getMensaje("000006"));
 		} catch (Exception e) {
 			request.setAttribute("error", e.getMessage());
 		}

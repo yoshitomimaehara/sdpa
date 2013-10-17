@@ -22,10 +22,10 @@ Email:
 	<aside class="span4 menu_dentro">
 		<ul class="nav nav-list">
 			<li class="nav-header">Curso</li>
-			<li><a href="#">Consultar</a></li>
+			<li><a href="curso_consultar.jsp">Consultar</a></li>
 			<li><a href="curso_insertar.jsp">Insertar</a></li>
 			<li><a href="#">Modificar</a></li>
-			<li><a href="#">Eliminar</a></li>
+			<li><a href="curso_eliminar.jsp">Eliminar</a></li>
 		</ul>
 	</aside>
 	

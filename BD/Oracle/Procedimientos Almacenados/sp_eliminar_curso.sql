@@ -6,6 +6,7 @@ create or replace procedure sp_eliminar_curso
 val number;
 v_cont number;
 v_msg varchar(500);
+v_msg_error varchar(500); 
 begin
  select count(*) into v_cont 
  from curso where codcurso=p_codcurso;
@@ -27,7 +28,7 @@ commit;
 exception 
 when others then
 rollback;
-  v_msg:=SQLERRM;
-  raise_application_error(-20001,v_msg);
+  v_msg_error:=SQLERRM;
+  raise_application_error(-20001,v_msg_error);
 end;
 /

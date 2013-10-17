@@ -27,4 +27,9 @@ public class AlumnoModel {
 		IAlumnoDao dao=new AlumnoDao();
 		dao.agregaralumno(nombre, apellido, ciclo, universidad, fech_nac, creditos, anio_ingreso,usuario);	
 	}
+	
+	public void eliminarAlumno(String idalumno,String usuario){
+		IAlumnoDao dao=new AlumnoDao();
+		dao.deletealumno(idalumno, usuario);
+	}
 }

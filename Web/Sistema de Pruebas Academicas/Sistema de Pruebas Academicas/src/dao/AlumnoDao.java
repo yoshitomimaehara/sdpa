@@ -86,6 +86,28 @@ public class AlumnoDao implements IAlumnoDao{
 		}
 		return al;
 	}
+
+	@Override
+	public void deletealumno(String idalumno,String usuario) {
+		Connection cn=null;
+		try {
+			cn=AccesoDB.getConnection();
+			String sql="{call sp_eliminar_alumno(?,?)}";
+			CallableStatement cstm=cn.prepareCall(sql);
+			cstm.setString(1, idalumno);
+			cstm.setString(2, usuario);
+			cstm.executeUpdate();
+			cstm.close();
+		} catch (Exception e) {
+			throw new RuntimeException(e.getMessage());
+		}finally{
+			try {
+				cn.close();
+			} catch (Exception e) {
+			}
+		}
+		
+	}
 	
 	
 }

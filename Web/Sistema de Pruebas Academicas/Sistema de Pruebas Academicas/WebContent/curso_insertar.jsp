@@ -24,5 +24,12 @@
 		<label>Creditos</label><input type="number" min="1" max="5" step="0.5" name="creditos"/>
 		<input type="submit" value="agregar"/>
 	</form>
+	<c:if test="${requestScope.error != null}">
+		<div class="alert alert-error">
+				<a class="close" data-dismiss="alert">&times;</a>	
+				${requestScope.error}	
+				
+		</div>
+	</c:if>
 </body>
 </html>

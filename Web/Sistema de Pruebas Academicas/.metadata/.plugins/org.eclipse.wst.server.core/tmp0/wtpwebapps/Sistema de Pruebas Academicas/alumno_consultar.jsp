@@ -45,6 +45,5 @@
 				
 		</div>
 	</c:if>
-	<p>
 </body>
 </html>

@@ -3,7 +3,7 @@ PROCEDURE SP_AGREGAR_CURSO
 (
   p_nombre varchar2,
   p_ciclo varchar2,
-  p_creditos integer,
+  p_creditos float,
   p_usuario varchar2
 )
 AS

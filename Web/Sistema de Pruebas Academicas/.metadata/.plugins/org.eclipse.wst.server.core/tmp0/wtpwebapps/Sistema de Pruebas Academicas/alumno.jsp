@@ -25,7 +25,7 @@ Email:
 			<li><a href="alumno_consultar.jsp" class="enlaces">Consultar</a></li>
 			<li><a href="alumno_insertar.jsp" class="enlaces">Insertar</a></li>
 			<li><a href="#">Modificar</a></li>
-			<li><a href="#">Eliminar</a></li>
+			<li><a href="alumno_eliminar.jsp" class="enlaces">Eliminar</a></li>
 		</ul>
 	</aside>
 	

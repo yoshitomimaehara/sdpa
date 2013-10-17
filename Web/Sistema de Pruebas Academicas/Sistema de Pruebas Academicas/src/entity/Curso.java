@@ -4,7 +4,7 @@ public class Curso {
     String codcurso;
     String nombre;
     String ciclo;
-    String creditos;
+    float creditos;
     
     public String getCodcurso() {
         return codcurso;
@@ -24,10 +24,10 @@ public class Curso {
     public void setCiclo(String ciclo) {
         this.ciclo = ciclo;
     }
-    public String getCreditos() {
+    public float getCreditos() {
         return creditos;
     }
-    public void setCreditos(String creditos) {
+    public void setCreditos(float creditos) {
         this.creditos = creditos;
     }
 }

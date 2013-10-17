@@ -1,0 +1,24 @@
+package dao;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+
+import database.AccesoDB;
+import interfaces.IProfesor;
+
+public class ProfesorDao implements IProfesor {
+
+	@Override
+	public void agregarProfesor(String Nombre, String Apellido,String usuario) {
+		Connection cn=null;
+		try {
+			cn=AccesoDB.getConnection();
+			String sql="{call sp_agrega_profesor(?,?,?)}";
+			CallableStatement cstm=cn.prepareCall(sql);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

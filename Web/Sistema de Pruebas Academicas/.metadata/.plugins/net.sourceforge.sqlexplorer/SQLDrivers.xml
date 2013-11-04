@@ -51,11 +51,6 @@
     <url>jdbc:derby://&lt;host&gt;:&lt;port&gt;/&lt;dbname&gt;;create=true;</url>
     <jars/>
   </driver>
-  <driver id="-2">
-    <name>Oracle OCI Driver</name>
-    <url>jdbc:oracle:oci8:@&lt;database_name&gt;</url>
-    <jars/>
-  </driver>
   <driver id="-15">
     <name>Mckoi</name>
     <url>jdbc:mckoi://&lt;host&gt;[:9157][/&lt;schema&gt;]/</url>
@@ -66,15 +61,25 @@
     <url>jdbc:sqlite:&lt;full_db_path&gt;</url>
     <jars/>
   </driver>
+  <driver id="-2">
+    <name>Oracle OCI Driver</name>
+    <url>jdbc:oracle:oci8:@&lt;database_name&gt;</url>
+    <jars/>
+  </driver>
+  <driver id="-27">
+    <name>Progress OpenEdge 10.1 JDBC Driver</name>
+    <url>jdbc:datadirect:openedge://hostname:port;databaseName=name</url>
+    <jars/>
+  </driver>
   <driver id="-1">
     <name>JDBC ODBC Bridge</name>
     <driver-class>sun.jdbc.odbc.JdbcOdbcDriver</driver-class>
     <url>jdbc:odbc:&lt;alias&gt;</url>
     <jars/>
   </driver>
-  <driver id="-27">
-    <name>Progress OpenEdge 10.1 JDBC Driver</name>
-    <url>jdbc:datadirect:openedge://hostname:port;databaseName=name</url>
+  <driver id="-17">
+    <name>HSQLDB Web Server</name>
+    <url>jdbc:hsqldb:http://&lt;server&gt;[:&lt;1476&gt;]</url>
     <jars/>
   </driver>
   <driver id="-4">
@@ -85,19 +90,14 @@
       <jar>D:/drivers/ojdbc6.jar</jar>
     </jars>
   </driver>
-  <driver id="-17">
-    <name>HSQLDB Web Server</name>
-    <url>jdbc:hsqldb:http://&lt;server&gt;[:&lt;1476&gt;]</url>
+  <driver id="-25">
+    <name>JayBird JCA/JDBC Driver for Firebird</name>
+    <url>jdbc:firebirdsql:[//host[:port]/]&lt;database&gt;</url>
     <jars/>
   </driver>
   <driver id="-16">
     <name>jTDS</name>
     <url>jdbc:freetds:sqlserver://&lt;hostname&gt;[:&lt;4100&gt;]/&lt;dbname&gt;[;&lt;property&gt;=&lt;value&gt;[;...]]</url>
-    <jars/>
-  </driver>
-  <driver id="-25">
-    <name>JayBird JCA/JDBC Driver for Firebird</name>
-    <url>jdbc:firebirdsql:[//host[:port]/]&lt;database&gt;</url>
     <jars/>
   </driver>
   <driver id="-6">

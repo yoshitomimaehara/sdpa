@@ -18,14 +18,15 @@
 <fullyQualifiedTypeName name="util.UtilDate"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="controller.CursoController"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
 <fullyQualifiedTypeName name="entity.Curso"/>
 <fullyQualifiedTypeName name="dao.CursoDao"/>
 <fullyQualifiedTypeName name="model.CursoModel"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="entity.Profesor"/>
 <fullyQualifiedTypeName name="database.AccesoDB"/>
 <fullyQualifiedTypeName name="java.sql.CallableStatement"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="entity.Profesor"/>
+<fullyQualifiedTypeName name="dao.ProfesorDao"/>
 </qualifiedTypeNameHistroy>

@@ -23,9 +23,7 @@ Email:
 		<ul class="nav nav-list">
 			<li class="nav-header">Usuario</li>
 			<li><a href="#">Consultar</a></li>
-			<li><a href="#">Insertar</a></li>
 			<li><a href="#">Modificar</a></li>
-			<li><a href="#">Eliminar</a></li>
 		</ul>
 	</aside>
 	

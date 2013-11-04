@@ -1,7 +1,0 @@
-package model;
-
-public class MensajeModel {
-	public static getMensaje(String codmen){
-		
-	}
-}

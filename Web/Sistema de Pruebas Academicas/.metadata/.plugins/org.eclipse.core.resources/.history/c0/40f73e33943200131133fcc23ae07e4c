@@ -1,5 +1,0 @@
-package interfaces;
-
-public interface ICurso {
-	public void agregarCurso(String codcurso,String nombre,String ciclo,float creditos);
-}

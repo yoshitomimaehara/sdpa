@@ -86,7 +86,6 @@ public class CursoDao implements ICurso {
 			try {
 				cn.close();
 			} catch (Exception e2) {
-				// TODO: handle exception
 			}
 		}
 		return cur;

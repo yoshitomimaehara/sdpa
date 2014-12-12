@@ -9,10 +9,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Date;
 
-import javax.servlet.http.HttpSession;
-
-import org.apache.catalina.Session;
-
 import util.UtilDate;
 import database.AccesoDB;
 

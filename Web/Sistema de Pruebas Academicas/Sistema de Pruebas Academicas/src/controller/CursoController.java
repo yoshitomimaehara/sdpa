@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.CursoModel;
-import model.MensajeModel;
 import entity.Curso;
 import entity.Usuario;
 

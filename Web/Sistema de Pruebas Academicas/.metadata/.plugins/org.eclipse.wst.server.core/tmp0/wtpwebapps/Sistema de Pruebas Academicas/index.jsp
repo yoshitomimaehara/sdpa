@@ -8,9 +8,10 @@ Email:
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <link rel="stylesheet" type="text/css" href="css\styles.css"/>
+<link rel="stylesheet" href="css\bootstrap.min.css">
 <link rel="stylesheet" href="css\bootstrap.min.css">
 <script src="js\bootstrap.js"></script>
 <script src="js\jquery.js"></script>

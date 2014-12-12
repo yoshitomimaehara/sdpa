@@ -13,9 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.MensajeDao;
 import model.AlumnoModel;
-import model.MensajeModel;
 import entity.Alumno;
 import entity.Usuario;
 
@@ -96,7 +94,6 @@ public class AlumnoController extends HttpServlet {
 					request.setAttribute("al",al);
 					HttpSession session=request.getSession();
 					session.getAttribute("usuario");
-					MensajeDao men = new MensajeDao();
 				}catch(Exception e){
 					request.setAttribute("error", e.getMessage());
 				}

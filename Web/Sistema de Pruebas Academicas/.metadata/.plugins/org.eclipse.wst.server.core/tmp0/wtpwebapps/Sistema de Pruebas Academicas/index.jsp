@@ -10,9 +10,11 @@ Email:
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="css\styles.css"/>
-<link rel="stylesheet" href="css\bootstrap.min.css">
-<link rel="stylesheet" href="css\bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css\bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css\bootstrap-responsive.min.css">
+<link rel="stylesheet" type="text/css" href="css\normalize.css">
 <script src="js\bootstrap.js"></script>
 <script src="js\jquery.js"></script>
 <script src="js\scripts.js"></script>
@@ -23,15 +25,15 @@ Email:
 			<h1>Sistema de Evaluaciones Academicas</h1>
 	</header>
 	<div class="container-fluid">
-  		<div class="row-fluid">
-		<section class="span6">
+  		<div class="row">
+		<section class="col-xs-2">
 			<article>
 				<div>
 					<img class="imagen" src="img\inicio.png" />
 				</div>
 			</article>
 		</section>
-		<aside class="span4 hero-unit login_index">
+		<aside class="col-xs-4 jumbotron login_index">
 			<form method="post" action="LoginIngreso">
 			<table>
 				<tr><td><label>Usuario:</label></td><td><input type="text" name="user"/></td></tr>

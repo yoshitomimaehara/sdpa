@@ -33,7 +33,7 @@ insert into nota(CODCUR,CODALUMNO,NOTA1,NOTA2,NOTA3,NOTA4)
    update control
    set valor=val
    where parametro='auditoria';
-   set p_estado = 'ok';sp_agrega_notas
+   set p_estado = 'ok';
 commit;
 
 end //

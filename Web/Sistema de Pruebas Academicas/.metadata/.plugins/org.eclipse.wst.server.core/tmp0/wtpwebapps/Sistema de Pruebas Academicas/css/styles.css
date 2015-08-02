@@ -52,10 +52,9 @@ body{
 
 .login_index{
    border:solid 1px;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
    border-radius: 8px;
-   
+   padding:0.1em;
+   left:5em;
 }
 
 .alerta{
@@ -70,6 +69,7 @@ body{
 .menu_panel{
 	
 }
+
 .menu_lista{
 	list-style-type:none;
 }
@@ -81,8 +81,8 @@ body{
 
 .imagen{
 	padding:1em;
-	height:30em;
-	width:30em;
+	height:10em;
+	width:10em;
 }
 
 .contenedor{
@@ -114,4 +114,22 @@ body{
 
 .formulario_adptado{
 	padding:2em;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+	.imagen{
+		padding:1em;
+		height:0.5em;
+		width:1em;
+		margin-left:1em;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
 }

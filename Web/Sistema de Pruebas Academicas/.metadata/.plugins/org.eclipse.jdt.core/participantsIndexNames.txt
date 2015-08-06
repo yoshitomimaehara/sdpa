@@ -1,3 +1,0 @@
-INDEX VERSION 1.126
-C:\Users\Yoshitomi\Documents\GitHub\sdpa\Web\Sistema de Pruebas Academicas\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2577437798.index
-\Sistema de Pruebas Academicas\src

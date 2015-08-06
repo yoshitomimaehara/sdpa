@@ -1,8 +1,0 @@
-package dao;
-
-public class AlumnoDao {
-	public void agregaralumno(){
-		Connection cn=null;
-		
-	}
-}

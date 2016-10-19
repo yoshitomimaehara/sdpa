@@ -1,0 +1,19 @@
+CREATE OR REPLACE TRIGGER TR_AGREGARCLIENTE
+AFTER INSERT ON CLIENTE
+FOR EACH ROW
+DECLARE
+v_msg varchar2(500);
+val int;
+cli varchar2(300);
+BEGIN
+   cli:=:NEW.dni;
+   v_msg:='se inserto los datos  de un nuevo cliente ' || cli;
+   select to_number(valor,99) into val from control
+   where parametro='auditoria';
+   insert into auditoria(CODSEGUIMIENTO,CAMBIO,VALOR_INICIO,VALOR_MODIF,USUARIO)
+   values(val,v_msg,0,0,:NEW.usuario);
+   val:=val+1;
+   update control
+   set valor=val
+   where parametro='auditoria';
+END;

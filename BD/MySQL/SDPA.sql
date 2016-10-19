@@ -156,9 +156,9 @@ insert into control values
 create table auditoria(
  codseguimiento integer not null,
  cambio varchar(500) not null,
- valor_inicio varchar(50)not null,
- valor_modif varchar(50)not null,
- usuario varchar(6)not null,
+ valor_inicio varchar(50) not null,
+ valor_modif varchar(50) not null,
+ usuario varchar(6) not null,
  constraint pk_auditoria
  primary key(codseguimiento),
  constraint fk_usuario

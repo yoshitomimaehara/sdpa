@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<history>
-  <element execution-count="1" last-execution-time="1381880950755" alias="sdpa" user-name="sdpa">select * from curso where codcurso='c00002'</element>
-  <element execution-count="1" last-execution-time="1381880927738" alias="sdpa" user-name="sdpa">select * from curso where codcurso=´c00002´</element>
-  <element execution-count="2" last-execution-time="1381791792781" alias="sdpa" user-name="sdpa">select * from alumno</element>
-  <element execution-count="1" last-execution-time="1381760931990" alias="sdpa" user-name="sdpa">select * from auditoria</element>
-  <element execution-count="1" last-execution-time="1381728212822" alias="sdpa" user-name="sdpa">desc alumno</element>
-</history>

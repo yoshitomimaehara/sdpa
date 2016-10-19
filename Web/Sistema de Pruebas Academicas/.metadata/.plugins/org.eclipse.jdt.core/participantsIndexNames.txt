@@ -1,9 +1,0 @@
-INDEX VERSION 1.126
-C:\Users\YOSHITOMI\SkyDrive\Sistema De Pruebas Académicas\Web\Sistema de Pruebas Academicas\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2577437798.index
-\Sistema de Pruebas Academicas\src
-C:\Users\YOSHITOMI\Documents\GitHub\sdpa\Web\Sistema de Pruebas Academicas\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2577437798.index
-\Sistema de Pruebas Academicas\src
-C:\Users\YOSHITOMI\Dropbox\Sistema De Pruebas Académicas\Web\Sistema de Pruebas Academicas\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2577437798.index
-\Sistema de Pruebas Academicas\src
-D:\Sistema de Pruebas Academicas\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2577437798.index
-\Sistema de Pruebas Academicas\src
